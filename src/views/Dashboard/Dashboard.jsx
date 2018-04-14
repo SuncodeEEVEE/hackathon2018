@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ChartistGraph from "react-chartist";
 import { Grid, Row, Col } from "react-bootstrap";
-
 import { Card } from "components/Card/Card.jsx";
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
 import { Tasks } from "components/Tasks/Tasks.jsx";
@@ -36,34 +35,38 @@ class Dashboard extends Component {
           <Row>
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<i className="fa fa-tachometer text-warning" />}
+                bigIcon={<i className="fa fa-tachometer text-success" />}
                 statsText="Miles Driven"
                 statsValue="105 Miles"
+                statsIcon={<i className="fa fa-refresh" />}
+                statsIconText={`Updated: ${new Date().toLocaleString()}`}
               />
             </Col>
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<i className="fa fa-gas text-success" />}
+                bigIcon={<i className="pe-7s-paint-bucket text-info" />}
                 statsText="Gas Savings"
                 statsValue="$1,345"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="fa fa-clock-o text-success" />}
-                statsText="Trees saved"
-                statsValue="23"
-                statsIcon={<i className="fa fa-clock-o" />}
-                statsIconText="In the last hour"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="fa fa-twitter text-info" />}
-                statsText="Followers"
-                statsValue="+45"
                 statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
+                statsIconText={`Updated: ${new Date().toLocaleString()}`}
+              />
+            </Col>
+            <Col lg={3} sm={6}>
+              <StatsCard
+                bigIcon={<i className="pe-7s-sun text-warning" />}
+                statsText="Trees Saved"
+                statsValue="23"
+                statsIcon={<i className="fa fa-refresh" />}
+                statsIconText={`Updated: ${new Date().toLocaleString()}`}
+              />
+            </Col>
+            <Col lg={3} sm={6}>
+              <StatsCard
+                bigIcon={<i className="fa fa-cloud text-secondary" />}
+                statsText="Emissions Reduced"
+                statsValue="-45"
+                statsIcon={<i className="fa fa-refresh" />}
+                statsIconText={`Updated: ${new Date().toLocaleString()}`}
               />
             </Col>
           </Row>
@@ -77,18 +80,25 @@ class Dashboard extends Component {
                 stats="Updated 3 minutes ago"
                 content={
                   <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataSales}
-                      type="Line"
-                      options={optionsSales}
-                      responsiveOptions={responsiveSales}
-                    />
+                  <StatsCard
+                    bigIcon={<i className="pe-7s-paint-bucket text-info" />}
+                    statsText="Gas Savings"
+                    statsValue="$1,345"
+                  />
                   </div>
                 }
                 legend={
                   <div className="legend">{this.createLegend(legendSales)}</div>
                 }
+              >
+              <StatsCard
+                bigIcon={<i className="pe-7s-paint-bucket text-info" />}
+                statsText="Gas Savings"
+                statsValue="$1,345"
+                statsIcon={<i className="fa fa-refresh" />}
+                statsIconText={`Updated: ${new Date().toLocaleString()}`}
               />
+              </Card>
             </Col>
             <Col md={4}>
               <Card
