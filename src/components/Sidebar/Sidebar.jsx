@@ -5,8 +5,9 @@ import HeaderLinks from "../Header/HeaderLinks.jsx";
 
 import imagine from "assets/img/sidebar-3.jpg";
 import logo from "assets/img/reactlogo.png";
-
+import { style } from "variables/Variables.jsx";
 import dashboardRoutes from "routes/dashboard.jsx";
+import eevee from "assets/img/eevee.png";
 
 class Sidebar extends Component {
   constructor(props) {
@@ -38,18 +39,17 @@ class Sidebar extends Component {
       >
         <div className="sidebar-background" style={sidebarBackground} />
         <div className="logo">
-          <div className="simple-text logo-mini">
-            <div className="pe-7s-leaf">
-
+          <a href="" className="simple-text logo-mini">
+            <div className="logo-img">
+              <img src={eevee} />
             </div>
-          </div>
-          <div className="simple-text logo-normal" >
-            The Eevee Experiment
-          </div>
+          </a>
+          <a href="" className="simple-text logo-normal" >
+            The eevee X
+          </a>
         </div>
         <div className="sidebar-wrapper">
           <ul className="nav">
-            {this.state.width <= 991 ? <HeaderLinks /> : null}
             {dashboardRoutes.map((prop, key) => {
               if (!prop.redirect)
                 return (
