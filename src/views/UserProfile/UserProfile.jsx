@@ -13,7 +13,7 @@ import { FormInputs } from "components/FormInputs/FormInputs.jsx";
 import { UserCard } from "components/UserCard/UserCard.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
-import avatar from "assets/img/faces/face-3.jpg";
+import avatar from "assets/img/faces/car3.jpeg";
 
 class UserProfile extends Component {
   render() {
@@ -21,130 +21,25 @@ class UserProfile extends Component {
       <div className="content">
         <Grid fluid>
           <Row>
-            <Col md={8}>
-              <Card
-                title="Edit Profile"
-                content={
-                  <form>
-                    <FormInputs
-                      ncols={["col-md-5", "col-md-3", "col-md-4"]}
-                      proprieties={[
-                        {
-                          label: "Company (disabled)",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "Company",
-                          defaultValue: "Creative Code Inc.",
-                          disabled: true
-                        },
-                        {
-                          label: "Username",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "Username",
-                          defaultValue: "michael23"
-                        },
-                        {
-                          label: "Email address",
-                          type: "email",
-                          bsClass: "form-control",
-                          placeholder: "Email"
-                        }
-                      ]}
-                    />
-                    <FormInputs
-                      ncols={["col-md-6", "col-md-6"]}
-                      proprieties={[
-                        {
-                          label: "First name",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "First name",
-                          defaultValue: "Mike"
-                        },
-                        {
-                          label: "Last name",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "Last name",
-                          defaultValue: "Andrew"
-                        }
-                      ]}
-                    />
-                    <FormInputs
-                      ncols={["col-md-12"]}
-                      proprieties={[
-                        {
-                          label: "Adress",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "Home Adress",
-                          defaultValue:
-                            "Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
-                        }
-                      ]}
-                    />
-                    <FormInputs
-                      ncols={["col-md-4", "col-md-4", "col-md-4"]}
-                      proprieties={[
-                        {
-                          label: "City",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "City",
-                          defaultValue: "Mike"
-                        },
-                        {
-                          label: "Country",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "Country",
-                          defaultValue: "Andrew"
-                        },
-                        {
-                          label: "Postal Code",
-                          type: "number",
-                          bsClass: "form-control",
-                          placeholder: "ZIP Code"
-                        }
-                      ]}
-                    />
-
-                    <Row>
-                      <Col md={12}>
-                        <FormGroup controlId="formControlsTextarea">
-                          <ControlLabel>About Me</ControlLabel>
-                          <FormControl
-                            rows="5"
-                            componentClass="textarea"
-                            bsClass="form-control"
-                            placeholder="Here can be your description"
-                            defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
-                          />
-                        </FormGroup>
-                      </Col>
-                    </Row>
-                    <Button bsStyle="info" pullRight fill type="submit">
-                      Update Profile
-                    </Button>
-                    <div className="clearfix" />
-                  </form>
-                }
-              />
-            </Col>
             <Col md={4}>
               <UserCard
-                bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
+                bgImage="https://images.pexels.com/photos/63324/california-road-highway-mountains-63324.jpeg?auto=compress&cs=tinysrgb&h=350"
                 avatar={avatar}
-                name="Mike Andrew"
-                userName="michael24"
+                name="Nissan Leaf 2018"
+                userName="Electric Vehicle"
                 description={
                   <span>
-                    "Lamborghini Mercy
+                    <br/>
+                    <b>MSRP:</b> From $29,990
+                    <br/>
+                    <b>Range:</b> 151 mi battery-only
+                    <br/>
+                    <b>Battery:</b> 40 kWh lithium-ion
+                    <br/>
+                    <b>MPGe:</b> 125 city / 100 highway
+                    <br/>
+                    <b>Battery Charge Time:</b> 8h at 220V
                     <br />
-                    Your chick she so thirsty
-                    <br />
-                    I'm in that two seat Lambo"
                   </span>
                 }
                 socials={
@@ -162,8 +57,71 @@ class UserProfile extends Component {
                 }
               />
             </Col>
+            <Col md={8}>
+              <Card
+                title="Your Combustion Vehicle"
+                content={
+                  <form>
+                    <FormInputs
+                      ncols={["col-md-6", "col-md-6"]}
+                      proprieties={[
+                        {
+                          label: "Year *",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "e.g. 2018",
+                          defaultValue: "",
+                          disabled: true
+                        },
+                        {
+                          label: "Make/Model *",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "e.g. Renault Twingo",
+                          defaultValue: "Nissan Sentra"
+                        }
+                      ]}
+                    />
+                    <FormInputs
+                      ncols={["col-md-12"]}
+                      proprieties={[
+                        {
+                          label: "Home Address",
+                          type: "email",
+                          bsClass: "form-control",
+                          placeholder: "e.g. 1837 El Camino Ave"
+                        },
+                        {
+                          label: "Work Address",
+                          type: "text",
+                          bsClass: "form-control",
+                          defaultValue: ""
+                        }
+                      ]}
+                    />
+                    <FormInputs
+                      ncols={["col-md-12"]}
+                      proprieties={[
+                        {
+                          label: "Work Address",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "e.g. 2181 California Ave",
+                        }
+                      ]}
+                    />
+
+                    <Button bsStyle="info" pullRight fill type="submit">
+                      Add Vehicle
+                    </Button>
+                    <div className="clearfix" />
+                  </form>
+                }
+              />
+            </Col>
+
           </Row>
-        </Grid>>
+        </Grid>
       </div>
     );
   }
