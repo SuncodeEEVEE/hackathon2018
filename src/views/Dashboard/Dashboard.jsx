@@ -35,7 +35,7 @@ class Dashboard extends Component {
           <Row>
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<i className="fa fa-tachometer text-success" />}
+                bigIcon={<i className="pe-7s-car text-success" />}
                 statsText="Miles Driven"
                 statsValue="105 Miles"
                 statsIcon={<i className="fa fa-refresh" />}
@@ -62,7 +62,7 @@ class Dashboard extends Component {
             </Col>
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<i className="fa fa-cloud text-secondary" />}
+                bigIcon={<i className="pe-7s-cloud text-secondary" />}
                 statsText="Emissions Reduced"
                 statsValue="-45"
                 statsIcon={<i className="fa fa-refresh" />}

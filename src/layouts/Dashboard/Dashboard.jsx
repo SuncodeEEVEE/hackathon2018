@@ -75,7 +75,7 @@ class Dashboard extends Component {
       title: <span data-notify="icon" className="pe-7s-leaf" />,
       message: (
         <div>
-          Welcome back! you have <b>4 days</b> left to the end fo your experiment. Have fun!
+          Welcome back! you have <b>4 days</b> left to the end of your experiment. Have fun!
         </div>
       ),
       level: level,
