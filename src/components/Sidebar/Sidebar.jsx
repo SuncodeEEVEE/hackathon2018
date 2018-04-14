@@ -38,20 +38,14 @@ class Sidebar extends Component {
       >
         <div className="sidebar-background" style={sidebarBackground} />
         <div className="logo">
-          <a
-            href="https://www.creative-tim.com"
-            className="simple-text logo-mini"
-          >
-            <div className="logo-img">
-              <img src={logo} alt="logo_image" />
+          <div className="simple-text logo-mini">
+            <div className="pe-7s-leaf">
+
             </div>
-          </a>
-          <a
-            href="https://www.creative-tim.com"
-            className="simple-text logo-normal"
-          >
-            Creative Tim
-          </a>
+          </div>
+          <div className="simple-text logo-normal" >
+            The Eevee Experiment
+          </div>
         </div>
         <div className="sidebar-wrapper">
           <ul className="nav">
