@@ -10,9 +10,9 @@ import {
 import ChartistGraph from "react-chartist";
 import {
   dataSales,
-  optionsSales,
   responsiveSales,
   legendSales,
+  optionsMilesDriven,
   dataMilesDriven,
   legendMilesDriven
 } from "variables/Variables.jsx";
@@ -51,7 +51,7 @@ class MilesDriven extends Component {
                       <ChartistGraph
                         data={dataMilesDriven}
                         type="Line"
-                        options={optionsSales}
+                        options={optionsMilesDriven}
                         responsiveOptions={responsiveSales}
                       />
                   </div>
