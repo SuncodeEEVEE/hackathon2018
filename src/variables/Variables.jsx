@@ -500,9 +500,25 @@ var dataSales = {
     [23, 113, 67, 108, 190, 239, 307, 308]
   ]
 };
+var dataMilesDriven = {
+  labels: [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ],
+  series: [
+    [20, 30, 32, 33, 35, 37, 40],
+    [30, 50, 42, 23, 15, 15, 10],
+    [10, 5, 60, 70, 76, 80, 80]
+  ]
+};
 var optionsSales = {
   low: 0,
-  high: 800,
+  high: 80,
   showArea: false,
   height: "245px",
   axisX: {
@@ -530,6 +546,11 @@ var responsiveSales = [
 ];
 var legendSales = {
   names: ["Open", "Click", "Click Second Time"],
+  types: ["info", "danger", "warning"]
+};
+
+var legendMilesDriven = {
+  names: ["Past Week", "2 Weeks ago", "3 Weeks ago"],
   types: ["info", "danger", "warning"]
 };
 
@@ -593,5 +614,7 @@ module.exports = {
   dataBar,
   optionsBar,
   responsiveBar,
-  legendBar // For charts (Dashboard view)
+  legendBar, // For charts (Dashboard view)
+  dataMilesDriven,
+  legendMilesDriven
 };
