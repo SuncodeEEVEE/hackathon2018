@@ -43,7 +43,7 @@ class Dashboard extends Component {
 
                   style={{textDecorationColor: '#fff'}}
                   statsText="Miles Driven"
-                  statsValue="105 Miles"
+                  statsValue="420 Miles"
                   statsIcon={<i className="fa fa-refresh" />}
                   statsIconText={`Updated: ${new Date().toLocaleString()}`}
                 />
@@ -82,96 +82,11 @@ class Dashboard extends Component {
                 <StatsCard
                   bigIcon={<i className="pe-7s-cloud text-secondary" />}
                   statsText="Emissions Reduced"
-                  statsValue="-45"
+                  statsValue="45 g/miles"
                   statsIcon={<i className="fa fa-refresh" />}
                   statsIconText={`Updated: ${new Date().toLocaleString()}`}
                 />
               </NavLink>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={8}>
-              <Card
-                statsIcon="fa fa-history"
-                id="chartHours"
-                title="Users Behavior"
-                category="24 Hours performance"
-                stats="Updated 3 minutes ago"
-                content={
-                  <div className="ct-chart">
-                      <ChartistGraph
-                        data={dataSales}
-                        type="Line"
-                        options={optionsSales}
-                        responsiveOptions={responsiveSales}
-                      />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendSales)}</div>
-                }
-              >
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card
-                statsIcon="fa fa-clock-o"
-                title="Email Statistics"
-                category="Last Campaign Performance"
-                stats="Campaign sent 2 days ago"
-                content={
-                  <div
-                    id="chartPreferences"
-                    className="ct-chart ct-perfect-fourth"
-                  >
-                    <ChartistGraph data={dataPie} type="Pie" />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendPie)}</div>
-                }
-              />
-            </Col>
-          </Row>
-
-          <Row>
-            <Col md={6}>
-              <Card
-                id="chartActivity"
-                title="2014 Sales"
-                category="All products including Taxes"
-                stats="Data information certified"
-                statsIcon="fa fa-check"
-                content={
-                  <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataBar}
-                      type="Bar"
-                      options={optionsBar}
-                      responsiveOptions={responsiveBar}
-                    />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendBar)}</div>
-                }
-              />
-            </Col>
-
-            <Col md={6}>
-              <Card
-                title="Tasks"
-                category="Backend development"
-                stats="Updated 3 minutes ago"
-                statsIcon="fa fa-history"
-                content={
-                  <div className="table-full-width">
-                    <table className="table">
-                      <Tasks />
-                    </table>
-                  </div>
-                }
-              />
             </Col>
           </Row>
         </Grid>
