@@ -14,9 +14,31 @@ import { UserCard } from "components/UserCard/UserCard.jsx";
 import Button from "components/CustomButton/CustomButton.jsx";
 
 import avatar from "assets/img/faces/car3.jpeg";
+import avatar1 from "assets/img/faces/car2.jpeg";
 
 class UserProfile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      submit: false,
+      submitAdd: false,
+    };
+  }
+
+  createCard = () => {
+    this.setState({
+      submit: true
+    })
+  }
+
+  createAddCard = () => {
+    this.setState({
+      submitAdd: true
+    })
+  }
+
   render() {
+
     return (
       <div className="content">
         <Grid fluid>
@@ -57,68 +79,132 @@ class UserProfile extends Component {
                 }
               />
             </Col>
-            <Col md={8}>
-              <Card
-                title="Your Combustion Vehicle"
-                content={
-                  <form>
-                    <FormInputs
-                      ncols={["col-md-6", "col-md-6"]}
-                      proprieties={[
-                        {
-                          label: "Year *",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "e.g. 2018",
-                          defaultValue: "",
-                          disabled: true
-                        },
-                        {
-                          label: "Make/Model *",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "e.g. Renault Twingo",
-                          defaultValue: "Nissan Sentra"
-                        }
-                      ]}
-                    />
-                    <FormInputs
-                      ncols={["col-md-12"]}
-                      proprieties={[
-                        {
-                          label: "Home Address",
-                          type: "email",
-                          bsClass: "form-control",
-                          placeholder: "e.g. 1837 El Camino Ave"
-                        },
-                        {
-                          label: "Work Address",
-                          type: "text",
-                          bsClass: "form-control",
-                          defaultValue: ""
-                        }
-                      ]}
-                    />
-                    <FormInputs
-                      ncols={["col-md-12"]}
-                      proprieties={[
-                        {
-                          label: "Work Address",
-                          type: "text",
-                          bsClass: "form-control",
-                          placeholder: "e.g. 2181 California Ave",
-                        }
-                      ]}
-                    />
+            {
+              this.state.submit && (
+              <Col md={4}>
+                <UserCard
+                  bgImage="https://images.pexels.com/photos/239520/pexels-photo-239520.jpeg?auto=compress&cs=tinysrgb&h=350"
+                  avatar={avatar1}
+                  name="Nissan Sentra 2018"
+                  userName="Conbustion Vehicle"
+                  description={
+                    <span>
+                      <br/>
+                      <b>MSRP:</b> From $16,990
+                      <br/>
+                      <b>Fuel Tank Capacity:</b> 13.2 gal
+                      <br/>
+                      <b>Horsepower:</b> 124 to 188 hp
+                      <br/>
+                      <b>MPG:</b> Up to 29 city / 37 highway
+                      <br/>
 
-                    <Button bsStyle="info" pullRight fill type="submit">
-                      Add Vehicle
-                    </Button>
-                    <div className="clearfix" />
-                  </form>
-                }
-              />
-            </Col>
+                    </span>
+                  }
+                  socials={
+                    <div>
+                      <Button simple>
+                        <i className="fa fa-facebook-square" />
+                      </Button>
+                      <Button simple>
+                        <i className="fa fa-twitter" />
+                      </Button>
+                      <Button simple>
+                        <i className="fa fa-google-plus-square" />
+                      </Button>
+                    </div>
+                  }
+                />
+              </Col>
+            )}
+            { !this.state.submit && (
+              <Col md={8}>
+                <Card
+                  title="Your Combustion Vehicle"
+                  content={
+                    <form>
+                      <FormInputs
+                        ncols={["col-md-6", "col-md-6"]}
+                        proprieties={[
+                          {
+                            label: "Year *",
+                            type: "text",
+                            bsClass: "form-control",
+                            placeholder: "e.g. 2018",
+                            defaultValue: "2018",
+                          },
+                          {
+                            label: "Make/Model *",
+                            type: "text",
+                            bsClass: "form-control",
+                            placeholder: "e.g. Renault Twingo",
+                            defaultValue: "Nissan Sentra"
+                          }
+                        ]}
+                      />
+
+
+                      <Button bsStyle="info" pullRight fill type="submit" onClick={() => this.createCard()}>
+                        Add Vehicle
+                      </Button>
+                      <div className="clearfix" />
+                    </form>
+                  }
+                />
+              </Col>
+            )}
+
+            {
+              this.state.submitAdd && (
+              <Col md={4}>
+                <Card
+                  title="Cost Savings Per Day"
+                  content={
+                    <h1>$71</h1>
+                  }
+                />
+              </Col>
+            )}
+
+            { this.state.submit && !this.state.submitAdd && (
+              <Col md={8}>
+                <Card
+                  title="Estimate Cost Savings (per year)"
+                  content={
+                    <form>
+                      <FormInputs
+                        ncols={["col-md-12"]}
+                        proprieties={[
+                          {
+                            label: "Home Address",
+                            type: "text",
+                            bsClass: "form-control",
+                            placeholder: "e.g. 1837 El Camino Ave",
+                            defaultValue: "37601-37661 Blacow Rd, Fremont"
+                          }
+                        ]}
+                      />
+                      <FormInputs
+                        ncols={["col-md-12"]}
+                        proprieties={[
+                          {
+                            label: "Work Address",
+                            type: "text",
+                            bsClass: "form-control",
+                            placeholder: "e.g. 2181 California Ave",
+                            defaultValue: "1330 Broadway, Oakland"
+                          }
+                        ]}
+                      />
+                      <Button bsStyle="info" pullRight fill type="submit" onClick={() => this.createAddCard()}>
+                        Estimate and Start Experiment
+                      </Button>
+                      <div className="clearfix" />
+                    </form>
+                  }
+                />
+              </Col>
+            )}
 
           </Row>
         </Grid>

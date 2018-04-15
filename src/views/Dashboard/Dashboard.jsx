@@ -16,6 +16,7 @@ import {
   responsiveBar,
   legendBar
 } from "variables/Variables.jsx";
+import { NavLink } from "react-router-dom";
 
 class Dashboard extends Component {
   createLegend(json) {
@@ -34,40 +35,58 @@ class Dashboard extends Component {
         <Grid fluid>
           <Row>
             <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-car text-success" />}
-                statsText="Miles Driven"
-                statsValue="105 Miles"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText={`Updated: ${new Date().toLocaleString()}`}
-              />
+              <NavLink
+                to={'milesDriven'}
+              >
+                <StatsCard
+                  bigIcon={<i className="pe-7s-car text-success" />}
+
+                  style={{textDecorationColor: '#fff'}}
+                  statsText="Miles Driven"
+                  statsValue="105 Miles"
+                  statsIcon={<i className="fa fa-refresh" />}
+                  statsIconText={`Updated: ${new Date().toLocaleString()}`}
+                />
+              </NavLink>
             </Col>
             <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-paint-bucket text-info" />}
-                statsText="Gas Savings"
-                statsValue="$1,345"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText={`Updated: ${new Date().toLocaleString()}`}
-              />
+              <NavLink
+                to={'GasSavings'}
+              >
+                <StatsCard
+                  bigIcon={<i className="pe-7s-paint-bucket text-info" />}
+                  statsText="Gas Savings"
+                  statsValue="$1,345"
+                  statsIcon={<i className="fa fa-refresh" />}
+                  statsIconText={`Updated: ${new Date().toLocaleString()}`}
+                />
+              </NavLink>
             </Col>
             <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-sun text-warning" />}
-                statsText="Trees Saved"
-                statsValue="23"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText={`Updated: ${new Date().toLocaleString()}`}
-              />
+              <NavLink
+                to={'TreesSaved'}
+              >
+                <StatsCard
+                  bigIcon={<i className="pe-7s-sun text-warning" />}
+                  statsText="Trees Saved"
+                  statsValue="23"
+                  statsIcon={<i className="fa fa-refresh" />}
+                  statsIconText={`Updated: ${new Date().toLocaleString()}`}
+                />
+              </NavLink>
             </Col>
             <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-cloud text-secondary" />}
-                statsText="Emissions Reduced"
-                statsValue="-45"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText={`Updated: ${new Date().toLocaleString()}`}
-              />
+              <NavLink
+                to={'EmissionsReduced'}
+              >
+                <StatsCard
+                  bigIcon={<i className="pe-7s-cloud text-secondary" />}
+                  statsText="Emissions Reduced"
+                  statsValue="-45"
+                  statsIcon={<i className="fa fa-refresh" />}
+                  statsIconText={`Updated: ${new Date().toLocaleString()}`}
+                />
+              </NavLink>
             </Col>
           </Row>
           <Row>
@@ -80,24 +99,18 @@ class Dashboard extends Component {
                 stats="Updated 3 minutes ago"
                 content={
                   <div className="ct-chart">
-                  <StatsCard
-                    bigIcon={<i className="pe-7s-paint-bucket text-info" />}
-                    statsText="Gas Savings"
-                    statsValue="$1,345"
-                  />
+                      <ChartistGraph
+                        data={dataSales}
+                        type="Line"
+                        options={optionsSales}
+                        responsiveOptions={responsiveSales}
+                      />
                   </div>
                 }
                 legend={
                   <div className="legend">{this.createLegend(legendSales)}</div>
                 }
               >
-              <StatsCard
-                bigIcon={<i className="pe-7s-paint-bucket text-info" />}
-                statsText="Gas Savings"
-                statsValue="$1,345"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText={`Updated: ${new Date().toLocaleString()}`}
-              />
               </Card>
             </Col>
             <Col md={4}>

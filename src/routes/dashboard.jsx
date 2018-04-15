@@ -1,5 +1,9 @@
 import Dashboard from "views/Dashboard/Dashboard";
 import UserProfile from "views/UserProfile/UserProfile";
+import MilesDriven from "views/MilesDriven/MilesDriven";
+import GasSavings from "views/GasSavings/GasSavings";
+import TreesSaved from "views/TreesSaved/TreesSaved";
+import EmissionsReduced from "views/EmissionsReduced/EmissionsReduced";
 import TableList from "views/TableList/TableList";
 import Typography from "views/Typography/Typography";
 import Icons from "views/Icons/Icons";
@@ -19,22 +23,48 @@ const dashboardRoutes = [
     icon: "pe-7s-car",
     component: UserProfile
   },
-  // {
-  //   path: "/table",
-  //   name: "Table List",
-  //   icon: "pe-7s-note2",
-  //   component: TableList
-  // },
-  // {
-  //   path: "/typography",
-  //   name: "Typography",
-  //   icon: "pe-7s-news-paper",
-  //   component: Typography
-  // },
-  // { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
-  // { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
-  //
-  //
+  {
+    path: "/milesDriven",
+    name: "Miles Driven",
+    titleIcon: "fa fa-arrow-left",
+    icon: "pe-7s-car",
+    component: MilesDriven
+  },
+  {
+    path: "/GasSavings",
+    name: "Gas Savings",
+    titleIcon: "fa fa-arrow-left",
+    icon: "pe-7s-paint-bucket ",
+    component: GasSavings
+  },
+  {
+    path: "/TreesSaved",
+    name: "Trees Saved",
+    titleIcon: "fa fa-arrow-left",
+    icon: "pe-7s-sun",
+    component: TreesSaved
+  },
+  {
+    path: "/EmissionsReduced",
+    name: "Emissions Reduced",
+    titleIcon: "fa fa-arrow-left",
+    icon: "pe-7s-cloud",
+    component: EmissionsReduced
+  },
+  {
+    path: "/table",
+    name: "Table List",
+    icon: "pe-7s-note2",
+    component: TableList
+  },
+  {
+    path: "/typography",
+    name: "Typography",
+    icon: "pe-7s-news-paper",
+    component: Typography
+  },
+  { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
+  { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
   // {
   //   upgrade: true,
   //   path: "/upgrade",

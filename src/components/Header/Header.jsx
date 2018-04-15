@@ -46,7 +46,7 @@ class Header extends Component {
           }
         } else {
           if (prop.path === this.props.location.pathname) {
-            name = prop.name;
+            name = prop.titleIcon;
           }
         }
       }
@@ -59,7 +59,7 @@ class Header extends Component {
       <Navbar fluid>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#pablo">{this.getBrand()}</a>
+            <a href="#pablo"><i className={this.getBrand()} /></a>
           </Navbar.Brand>
           <Navbar.Toggle onClick={this.mobileSidebarToggle} />
         </Navbar.Header>
