@@ -104,6 +104,10 @@ h1 .subtitle {
   display: block;
   margin: 0 0 30px; }
 
+.text-normal{
+  color: #000000
+}
+
 .text-muted {
   color: #9A9A9A; }
 
@@ -1890,6 +1894,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   font-size: 2em;
   text-align: right; }
   .card-stats .numbers p {
+    color: #000000;
     margin: 0; }
 
 .ct-label {
