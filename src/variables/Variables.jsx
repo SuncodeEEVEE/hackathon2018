@@ -511,14 +511,110 @@ var dataMilesDriven = {
     "Sunday"
   ],
   series: [
-    [20, 30, 32, 33, 35, 37, 40],
-    [30, 50, 42, 23, 15, 15, 10],
-    [10, 5, 60, 70, 76, 80, 80]
+    [25, 25, 34, 45, 45, 45, 50],
+    [20, 27, 32, 33, 35, 37, 40],
+    [20, 25, 25, 23, 15, 16, 18]
   ]
 };
-var optionsSales = {
+var dataGasSavings = {
+  labels: [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ],
+  series: [
+    [65, 65, 94, 95, 95, 95, 100],
+    [40, 47, 62, 63, 65, 67, 80],
+    [40, 42, 45, 43, 40, 46, 58]
+  ]
+};
+var dataTreesSaved = {
+  labels: [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ],
+  series: [
+    [5, 6, 6, 7, 7, 9, 9],
+    [2, 4, 5, 5, 5, 6, 6],
+    [0, 1, 2, 2, 2, 3, 3]
+  ]
+};
+var dataEmissionsReduced = {
+  labels: [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ],
+  series: [
+    [300, 310, 320, 330, 330, 340, 350],
+    [300, 310, 320, 330, 330, 340, 350],
+    [300, 310, 320, 330, 330, 340, 350]
+  ]
+};
+var optionsMilesDriven = {
   low: 0,
-  high: 80,
+  high: 60,
+  showArea: false,
+  height: "245px",
+  axisX: {
+    showGrid: false
+  },
+  lineSmooth: true,
+  showLine: true,
+  showPoint: true,
+  fullWidth: true,
+  chartPadding: {
+    right: 50
+  }
+};
+var optionsGasSavings = {
+  low: 0,
+  high: 100,
+  showArea: false,
+  height: "245px",
+  axisX: {
+    showGrid: false
+  },
+  lineSmooth: true,
+  showLine: true,
+  showPoint: true,
+  fullWidth: true,
+  chartPadding: {
+    right: 50
+  }
+};
+var optionsTreesSaved = {
+  low: 0,
+  high: 10,
+  showArea: false,
+  height: "245px",
+  axisX: {
+    showGrid: false
+  },
+  lineSmooth: true,
+  showLine: true,
+  showPoint: true,
+  fullWidth: true,
+  chartPadding: {
+    right: 50
+  }
+};
+var optionsEmissionsReduced = {
+  low: 200,
+  high: 400,
   showArea: false,
   height: "245px",
   axisX: {
@@ -608,13 +704,19 @@ module.exports = {
   dataPie,
   legendPie,
   dataSales,
-  optionsSales,
   responsiveSales,
   legendSales,
   dataBar,
   optionsBar,
   responsiveBar,
   legendBar, // For charts (Dashboard view)
+  optionsMilesDriven,
   dataMilesDriven,
-  legendMilesDriven
+  legendMilesDriven,
+  optionsGasSavings,
+  dataGasSavings,
+  optionsTreesSaved,
+  dataTreesSaved,
+  optionsEmissionsReduced,
+  dataEmissionsReduced
 };

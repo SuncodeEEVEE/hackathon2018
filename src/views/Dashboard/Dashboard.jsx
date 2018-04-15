@@ -80,7 +80,7 @@ class Dashboard extends Component {
                 to={'EmissionsReduced'}
               >
                 <StatsCard
-                  bigIcon={<i className="pe-7s-cloud" />}
+                  bigIcon={<i className="pe-7s-cloud text-secondary" />}
                   statsText="Emissions Reduced"
                   statsValue="179.4 g/mi"
                   statsIcon={<i className="fa fa-refresh" />}

@@ -10,10 +10,10 @@ import {
 import ChartistGraph from "react-chartist";
 import {
   dataSales,
-  optionsSales,
   responsiveSales,
   legendSales,
-  dataMilesDriven,
+  optionsTreesSaved,
+  dataTreesSaved,
   legendMilesDriven
 } from "variables/Variables.jsx";
 import { Card } from "components/Card/Card.jsx";
@@ -64,9 +64,9 @@ class TreesSaved extends Component {
                 content={
                   <div className="ct-chart">
                       <ChartistGraph
-                        data={dataMilesDriven}
+                        data={dataTreesSaved}
                         type="Line"
-                        options={optionsSales}
+                        options={optionsTreesSaved}
                         responsiveOptions={responsiveSales}
                       />
                   </div>
