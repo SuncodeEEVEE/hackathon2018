@@ -45,13 +45,13 @@ class TreesSaved extends Component {
                 title="Stats Breakdown"
                 content={
                   <div>
-                    <b>Carbon Emissions of ICE: </b> <br/>165.37 tonnes <br/>
+                    <b>Carbon Emissions of ICE: </b> <br/>0.165 tonnes <br/>
                     <br/>
-                    <b>Carbon Emissions of EV: </b><br/> 44.1 tonnes <br/>
+                    <b>Carbon Emissions of EV: </b><br/> 0.441 tonnes <br/>
                     <br/>
-                    <b>Total Carbon Emissions Savings: </b> <br/>121.27 tonnes <br/>
+                    <b>Total Carbon Emissions Savings: </b> <br/>0.121 tonnes <br/>
                     <br/>
-                    <b>Equivalent to: </b> <br/>606 trees saved <br/>
+                    <b>Equivalent to: </b> <br/>6 trees saved <br/>
                   </div>
                 }
               />

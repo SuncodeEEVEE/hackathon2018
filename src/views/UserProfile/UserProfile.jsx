@@ -174,7 +174,7 @@ class UserProfile extends Component {
               this.state.submitAdd && (
               <Col md={4}>
                 <Card
-                  title="Cost Savings Per Year"
+                  title="Estimated Cost Savings Per Year"
                   content={
                     <h1>$570</h1>
                   }

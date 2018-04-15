@@ -69,7 +69,7 @@ class Dashboard extends Component {
                 <StatsCard
                   bigIcon={<i className="pe-7s-sun text-warning" />}
                   statsText="Trees Saved"
-                  statsValue="606"
+                  statsValue="6"
                   statsIcon={<i className="fa fa-refresh" />}
                   statsIconText={`Updated: ${new Date().toLocaleString()}`}
                 />
