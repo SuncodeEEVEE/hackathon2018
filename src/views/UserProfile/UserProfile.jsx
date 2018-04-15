@@ -44,6 +44,22 @@ class UserProfile extends Component {
         <Grid fluid>
           <Row>
             <Col md={4}>
+
+                 <div className="text-muted">
+                   <b>Hi! Welcome to The Eevee Experiment.</b>
+                   <br/>
+                   By the end of the experiment, you will find out the amount of positive impact you can contribute to the world by just switching to an EV!
+                   <br/>
+                   <br/>
+                   Let's begin by telling us more about you.
+                   <br/>
+                   <br/>
+                </div>
+
+
+            </Col>
+
+            <Col md={4}>
               <UserCard
                 bgImage="https://images.pexels.com/photos/63324/california-road-highway-mountains-63324.jpeg?auto=compress&cs=tinysrgb&h=350"
                 avatar={avatar}
@@ -163,6 +179,9 @@ class UserProfile extends Component {
                     <h1>$71</h1>
                   }
                 />
+                <Button bsStyle="info" pullRight fill type="submit" href="#pablo">
+                  Start Experiment!
+                </Button>
               </Col>
             )}
 
@@ -197,7 +216,7 @@ class UserProfile extends Component {
                         ]}
                       />
                       <Button bsStyle="info" pullRight fill type="submit" onClick={() => this.createAddCard()}>
-                        Estimate and Start Experiment
+                        Estimate Cost Savings
                       </Button>
                       <div className="clearfix" />
                     </form>
