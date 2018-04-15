@@ -56,7 +56,7 @@ class Dashboard extends Component {
                 <StatsCard
                   bigIcon={<i className="pe-7s-paint-bucket text-info" />}
                   statsText="Gas Savings"
-                  statsValue="$1,345"
+                  statsValue="$25.2"
                   statsIcon={<i className="fa fa-refresh" />}
                   statsIconText={`Updated: ${new Date().toLocaleString()}`}
                 />
@@ -69,7 +69,7 @@ class Dashboard extends Component {
                 <StatsCard
                   bigIcon={<i className="pe-7s-sun text-warning" />}
                   statsText="Trees Saved"
-                  statsValue="23"
+                  statsValue="606"
                   statsIcon={<i className="fa fa-refresh" />}
                   statsIconText={`Updated: ${new Date().toLocaleString()}`}
                 />
@@ -82,7 +82,7 @@ class Dashboard extends Component {
                 <StatsCard
                   bigIcon={<i className="pe-7s-cloud" />}
                   statsText="Emissions Reduced"
-                  statsValue="45 g/miles"
+                  statsValue="179.4 g/mi"
                   statsIcon={<i className="fa fa-refresh" />}
                   statsIconText={`Updated: ${new Date().toLocaleString()}`}
                 />

@@ -174,9 +174,9 @@ class UserProfile extends Component {
               this.state.submitAdd && (
               <Col md={4}>
                 <Card
-                  title="Cost Savings Per Day"
+                  title="Cost Savings Per Year"
                   content={
-                    <h1>$71</h1>
+                    <h1>$570</h1>
                   }
                 />
                 <Button bsStyle="info" pullRight fill type="submit" href="#pablo">
@@ -188,7 +188,7 @@ class UserProfile extends Component {
             { this.state.submit && !this.state.submitAdd && (
               <Col md={8}>
                 <Card
-                  title="Estimate Cost Savings (per year)"
+                  title="Estimate Cost Savings"
                   content={
                     <form>
                       <FormInputs

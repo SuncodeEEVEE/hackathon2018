@@ -40,6 +40,21 @@ class TreesSaved extends Component {
         <Grid fluid>
           <Row>
             <Col md={12}>
+
+              <Card
+                title="Stats Breakdown"
+                content={
+                  <div>
+                    <b>Carbon Emissions of ICE: </b> <br/>165.37 tonnes <br/>
+                    <br/>
+                    <b>Carbon Emissions of EV: </b><br/> 44.1 tonnes <br/>
+                    <br/>
+                    <b>Total Carbon Emissions Savings: </b> <br/>121.27 tonnes <br/>
+                    <br/>
+                    <b>Equivalent to: </b> <br/>606 trees saved <br/>
+                  </div>
+                }
+              />
               <Card
                 statsIcon="fa fa-history"
                 id="chartHours"
